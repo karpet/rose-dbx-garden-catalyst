@@ -1,0 +1,6 @@
+* tests tests tests
+
+* drop Templates and instead indicate template_class as CatalystX::CRUD::YUI::Static
+
+* refactor how DataTable class works
+

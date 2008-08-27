@@ -89,7 +89,7 @@ Revision history for Rose-DBx-Garden-Catalyst
 0.09_04 11 Aug 2008
         * update .tt and .pm files to support multi-column PKs
 
-0.09_05 xxx
+0.09_05 27 Aug 2008
         * fix UTF-8 encoding bug where JSON:XS utf8() flag was incorrectly set to 'on'.
         * move bulk of the code into smaller packages:
             CatalystX::CRUD::YUI

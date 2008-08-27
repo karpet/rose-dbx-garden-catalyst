@@ -9,7 +9,7 @@ use Carp;
 use Data::Dump qw( dump );
 use Class::C3;
 
-our $VERSION = '0.09_05';
+our $VERSION = '0.09_06';
 
 =head1 NAME
 

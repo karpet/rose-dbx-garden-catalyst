@@ -16,7 +16,7 @@ use Rose::Object::MakeMethods::Generic (
     boolean                 => [ 'tt' => { default => 1 }, ]
 );
 
-our $VERSION = '0.09_05';
+our $VERSION = '0.09_06';
 
 =head1 NAME
 

@@ -45,6 +45,11 @@ Rose::DBx::Garden::Catalyst - plant Roses in your Catalyst garden
     # run your script
     > perl mk_cat_garden.pl
     
+    # update your MyApp.pm file:
+     
+     __PACKAGE__->setup();
+     Class::C3::initialize();   # add this line
+        
     # start your Catalyst dev server
     > cd MyApp
     > perl script/myapp_server.pl

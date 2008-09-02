@@ -502,7 +502,6 @@ __PACKAGE__->config(
     primary_key             => ['$pk'],
     view_on_single_result   => 1,
     page_size               => 50,
-    schema_class_prefix     => '$base_rdbo_class',
 );
 
 1;

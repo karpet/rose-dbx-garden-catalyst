@@ -10,6 +10,7 @@ use Tree::Simple;
 use Tree::Simple::Visitor::ToNestedHash;
 use Class::Inspector;
 use File::Copy;
+use CatalystX::CRUD::YUI::TT;
 
 use Rose::Object::MakeMethods::Generic (
     'scalar --get_set_init' => [qw( catalyst_prefix controller_prefix )],

@@ -115,7 +115,7 @@ use base qw( Rose::DBx::Garden::Catalyst::Form );
 
 sub init_metadata {
     my \$self = shift;
-    return Rose::DBx::Garden::Catalyst::Form::Metadata->new( 
+    return \$self->metadata_class->new( 
         form                => \$self,
         controller_prefix   => '$controller_prefix',
     );

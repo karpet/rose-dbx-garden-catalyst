@@ -17,7 +17,7 @@ use Rose::Object::MakeMethods::Generic (
     boolean                 => [ 'tt' => { default => 1 }, ]
 );
 
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 =head1 NAME
 
@@ -445,23 +445,9 @@ use strict;
 use warnings;
 use base qw( Catalyst::Controller );
 
-sub auto : Private {
-    my (\$self, \$c) = \@_;
-    \$c->stash->{current_view} = 'RDGC';
-    1;
-}
-
 sub default : Path {
     my (\$self, \$c) = \@_;
     \$c->stash->{template} = '$base_path/default.tt';
-}
-
-sub end : ActionClass('RenderView') {
-    my ( \$self, \$c ) = \@_;
-    if ( \$c->req->param('as_xls') ) {
-        \$c->stash->{current_view} = 'Excel';
-        \$c->stash->{template}     = 'rdgc/list.xls.tt';
-    }
 }
 
 1;

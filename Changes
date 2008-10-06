@@ -108,3 +108,6 @@ Revision history for Rose-DBx-Garden-Catalyst
 0.10    29 Sept 2008
         * added missing req to Makefile.PL
 
+0.11    xxx
+        * base controller no longer sets current_view
+

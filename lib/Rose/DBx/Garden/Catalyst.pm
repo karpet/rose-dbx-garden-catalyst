@@ -506,6 +506,15 @@ use strict;
 use warnings;
 use base qw( Rose::DBx::Garden::Catalyst::Controller );
 
+__PACKAGE__->config(
+    default_view    => 'RDGC',
+    fmt_to_view_map => {
+        html => "RDGC",
+        json => "RDGC",
+        xls  => "Excel"
+    },
+);
+
 1;
 
 EOF

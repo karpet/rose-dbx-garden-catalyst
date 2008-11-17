@@ -283,7 +283,7 @@ sub make_catalyst {
     }
 
     # we need 1 dir, possibly 2
-    my $rdgc_tt_dir = dir( $tt_dir, 'crud' );   # used to be 'rdgc'
+    my $rdgc_tt_dir = dir( $tt_dir, 'crud' );      # used to be 'rdgc'
     my $base_tt_dir = dir( $tt_dir, $base_url );
     $rdgc_tt_dir->mkpath(1);
     $base_tt_dir->mkpath(1);
@@ -323,6 +323,8 @@ sub make_catalyst {
     $js_dir->mkpath(1);
     my $css_dir = dir( $tt_dir, 'static', 'css' );
     $css_dir->mkpath(1);
+    my $css_crud_dir = dir( $css_dir, 'crud' );
+    $css_crud_dir->mkpath(1);
 
     copy( file( $cx_crud_yui_tt_path, 'static', 'js', 'crud.js' ),
         file( $js_dir, 'crud.js' ) )
@@ -333,6 +335,14 @@ sub make_catalyst {
     copy( file( $cx_crud_yui_tt_path, 'static', 'css', 'crud.css' ),
         file( $css_dir, 'crud.css' ) )
         or warn "ERROR: failed to copy crud.css to local static/css\n";
+
+    # all the css files
+    my $css_base_dir = dir( $cx_crud_yui_tt_path, 'static', 'css', 'crud' );
+    while ( my $css_file = $css_base_dir->next ) {
+        next unless -f $css_file;
+        copy( $css_file, file( $css_crud_dir, $css_file->basename ) )
+            or warn "ERROR: failed to copy $css_file to $css_crud_dir\n";
+    }
 
     return $garden;
 }

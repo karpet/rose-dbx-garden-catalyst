@@ -110,4 +110,5 @@ Revision history for Rose-DBx-Garden-Catalyst
 
 0.11    xxx
         * base controller no longer sets current_view
+        * copy all static/css/crud/*.css files
 

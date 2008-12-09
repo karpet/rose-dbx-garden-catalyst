@@ -24,33 +24,6 @@ with some additional/overridden methods for working with YUI and JSON.
 
 =cut
 
-#=head2 precommit
-#
-#Overrides the base method to double-check that all
-#int-type fields of zero length() are set to undef.
-#This addresses a RHTMLO bug that is supposedly fixed
-#in version 0.552 and later.
-#
-#=cut
-#
-#sub precommit {
-#    my ( $self, $c, $obj ) = @_;
-#
-#    for my $col ( $obj->meta->columns ) {
-#        my $name = $col->name;
-#        if ( $col->type =~ m/int/ ) {
-#            if ( defined $obj->$name && !length( $obj->$name ) ) {
-#                $c->log->warn(
-#                    "precommit: $name fixed to undef instead of empty string"
-#                );
-#                $obj->$name(undef);
-#            }
-#        }
-#    }
-#
-#    1;
-#}
-
 =head2 autocomplete_columns
 
 Should return arrayref of fields to search when

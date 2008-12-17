@@ -24,6 +24,7 @@ WriteMakefile(
         'Tree::Simple'      => 0,
         'Tree::Simple::Visitor::ToNestedHash' => 0,
         'IPC::Cmd'          => 0,
+        'MRO::Compat'       => 0,
     },
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean               => { FILES => 'Rose-DBx-Garden-Catalyst-* t/lib/MyRDGC/lib/MyRDBO*

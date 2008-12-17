@@ -14,6 +14,8 @@ __PACKAGE__->setup;
 
 # required by CatalystX::CRUD::YUI
 use Class::C3;
-Class::C3::initialize();
+use MRO::Compat;
+mro::set_mro(__PACKAGE__, 'c3');
+Class::C3::reinitialize();
 
 1;

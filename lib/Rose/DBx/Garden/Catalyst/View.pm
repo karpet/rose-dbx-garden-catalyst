@@ -6,7 +6,7 @@ use Class::Inspector;
 use Path::Class;
 use Rose::DBx::Garden::Catalyst::TT;
 use MRO::Compat;
-mro::set_mro(__PACKAGE__, 'c3');
+use mro 'c3';
 
 our $VERSION = '0.14';
 

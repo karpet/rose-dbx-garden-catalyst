@@ -7,7 +7,7 @@ use base qw( Rose::DB::Object );
 use base qw( Rose::DB::Object::Helpers );
 use base qw( Rose::DBx::Object::MoreHelpers );
 use MRO::Compat;
-mro::set_mro(__PACKAGE__, 'c3');
+use mro 'c3';
 
 our $VERSION = '0.14';
 

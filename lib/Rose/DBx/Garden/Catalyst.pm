@@ -456,7 +456,7 @@ use strict;
 use warnings;
 use base qw( Catalyst::Controller );
 use MRO::Compat;
-mro::set_mro(__PACKAGE__, 'c3');
+use mro 'c3';
 
 sub default : Path {
     my (\$self, \$c) = \@_;
@@ -491,7 +491,7 @@ package $contr_class;
 use strict;
 use base qw( ${catalyst_prefix}::Base::Controller::RHTMLO );
 use MRO::Compat;
-mro::set_mro(__PACKAGE__, 'c3');
+use mro 'c3';
 use $form_class;
 
 __PACKAGE__->config(
@@ -521,7 +521,7 @@ use strict;
 use warnings;
 use base qw( Rose::DBx::Garden::Catalyst::Controller );
 use MRO::Compat;
-mro::set_mro(__PACKAGE__, 'c3');
+use mro 'c3';
 
 __PACKAGE__->config(
     default_view    => 'RDGC',
@@ -547,7 +547,7 @@ use strict;
 use warnings;
 use base qw( CatalystX::CRUD::Model::RDBO );
 use MRO::Compat;
-mro::set_mro(__PACKAGE__, 'c3');
+use mro 'c3';
 
 1;
 
@@ -563,7 +563,7 @@ package $model_class;
 use strict;
 use base qw( ${catprefix}::Base::Model::RDBO );
 use MRO::Compat;
-mro::set_mro(__PACKAGE__, 'c3');
+use mro 'c3';
 
 __PACKAGE__->config(
     name                    => '$rdbo_class',
@@ -586,7 +586,7 @@ use strict;
 use warnings;
 use base qw( Rose::DBx::Garden::Catalyst::View );
 use MRO::Compat;
-mro::set_mro(__PACKAGE__, 'c3');
+use mro 'c3';
 
 1;
 
@@ -604,7 +604,7 @@ use warnings;
 use base qw( CatalystX::CRUD::View::Excel );
 use CatalystX::CRUD::YUI;
 use MRO::Compat;
-mro::set_mro(__PACKAGE__, 'c3');
+use mro 'c3';
 
 sub get_template_params {
     my ( \$self, \$c ) = \@_;

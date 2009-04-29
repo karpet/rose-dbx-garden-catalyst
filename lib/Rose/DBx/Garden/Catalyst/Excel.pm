@@ -4,10 +4,9 @@ use warnings;
 use base qw( CatalystX::CRUD::YUI::Excel );
 use Carp;
 use Data::Dump qw( dump );
-use Class::C3;
 use Rose::DBx::Garden::Catalyst::TT;
 use MRO::Compat;
-mro::set_mro(__PACKAGE__, 'c3');
+use mro 'c3';
 
 our $VERSION = '0.14';
 

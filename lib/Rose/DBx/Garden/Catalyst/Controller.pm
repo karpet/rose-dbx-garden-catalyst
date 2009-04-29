@@ -8,7 +8,7 @@ use base qw(
 use Carp;
 use Data::Dump qw( dump );
 use MRO::Compat;
-mro::set_mro(__PACKAGE__, 'c3');
+use mro 'c3';
 
 our $VERSION = '0.14';
 

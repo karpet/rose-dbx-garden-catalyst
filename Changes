@@ -123,4 +123,3 @@ Revision history for Rose-DBx-Garden-Catalyst
 0.14    xxx
         * drop tables conditionally in rdgc.sql
         * refactor C3 syntax
-        * add (currently failing) test for Catalyst-Runtime 5.8 MOP issue

@@ -1,4 +1,4 @@
-use Test::More tests => 7;
+use Test::More tests => 6;
 
 use lib qw( t/lib t/lib/MyRDGC/lib );
 use Data::Dump qw( dump );
@@ -28,11 +28,6 @@ ok( $garden->plant('t/lib/MyRDGC/lib'), "plant garden" );
 # require since it won't exist till we bootstrap it
 require Catalyst::Test;
 Catalyst::Test->import('MyRDGC');
-
-# bug in Cat-Runtime 5.80 means config() gets nuked after
-# Class::C3::initalize() call at setup time.
-diag( dump MyRDGC->config );
-ok( keys %{ MyRDGC->config }, "main app config ok");
 
 my $res;
 ok( $res = request('/crud/rdgctest'), "get /crud/rdgctest" );

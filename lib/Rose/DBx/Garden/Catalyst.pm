@@ -341,7 +341,8 @@ sub make_catalyst {
     my $css_base_dir = dir( $cx_crud_yui_tt_path, 'static', 'css', 'crud' );
     while ( my $css_file = $css_base_dir->next ) {
         next unless -f $css_file;
-        copy( $css_file . '' , file( $css_crud_dir, $css_file->basename ) . '' )
+        copy( $css_file . '',
+            file( $css_crud_dir, $css_file->basename ) . '' )
             or warn "ERROR: failed to copy $css_file to $css_crud_dir\n";
     }
 
@@ -363,7 +364,7 @@ sub _make_menu_items {
         $item{txt} = $child;
         if ( keys %{ $children->{$child} } ) {
             $item{items}
-                = $self->_make_menu_item( $item{href}, $children->{$child} );
+                = $self->_make_menu_items( $item{href}, $children->{$child} );
         }
         elsif ( $child !~ m/^(Search|Create|List)$/ ) {
             $item{items} = $self->_make_menu_items( $item{href},

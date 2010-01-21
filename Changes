@@ -123,3 +123,7 @@ Revision history for Rose-DBx-Garden-Catalyst
 0.14    7 June 2009
         * drop tables conditionally in rdgc.sql
         * refactor C3 syntax
+
+0.15    xxx
+        * pod patches from movingtarget@mackler.org
+        

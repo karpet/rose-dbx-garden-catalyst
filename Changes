@@ -126,4 +126,4 @@ Revision history for Rose-DBx-Garden-Catalyst
 
 0.15    xxx
         * pod patches from movingtarget@mackler.org
-        
+        * remove .yml config file and plugin dependency

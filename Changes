@@ -1,5 +1,8 @@
 Revision history for Rose-DBx-Garden-Catalyst
 
+0.17 xxx
+ - fix SYNOPSIS to add note about default_view
+
 0.16 31 Oct 2012
  - more pod patches from Adam Mackler
  - improve docs

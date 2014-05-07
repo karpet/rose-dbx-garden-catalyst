@@ -1,5 +1,11 @@
 Revision history for Perl module Rose::DBx::Garden::Catalyst
 
+0.180 xxx
+ - update test app scripts with latest catalyst.pl
+ - tweek .sql to make autoincrement PKs work for sqlite3
+ - change Plugin::Static::Simple to Plugin::Static::Simple::ByClass
+   for test app (now matches SYNOPSIS)
+
 0.17 2013-10-11
  - fix SYNOPSIS to add note about default_view
 

@@ -5,6 +5,7 @@ Revision history for Perl module Rose::DBx::Garden::Catalyst
  - tweek .sql to make autoincrement PKs work for sqlite3
  - change Plugin::Static::Simple to Plugin::Static::Simple::ByClass
    for test app (now matches SYNOPSIS)
+ - switch to File::Slurp::Tiny
 
 0.17 2013-10-11
  - fix SYNOPSIS to add note about default_view

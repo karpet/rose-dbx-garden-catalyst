@@ -34,6 +34,7 @@ WriteMakefile(
         'IPC::Cmd'                                  => 0,
         'MRO::Compat'                               => 0,
         'Class::C3'                                 => 0,
+        'File::Slurp::Tiny'                         => 0,
     },
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean => {

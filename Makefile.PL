@@ -18,7 +18,7 @@ WriteMakefile(
     PL_FILES      => {},
     PREREQ_PM     => {
         'Test::More'                                => 0,
-        'Rose::DBx::Garden'                         => 0.15,
+        'Rose::DBx::Garden'                         => '0.190',
         'Rose::DB::Object'                          => 0.770,
         'Rose::DBx::Object::MoreHelpers'            => 0.06,
         'Rose::DBx::AutoReconnect'                  => 0,

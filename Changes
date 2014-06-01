@@ -1,6 +1,6 @@
 Revision history for Perl module Rose::DBx::Garden::Catalyst
 
-0.180 xxx
+0.180 2014-05-31
  - update test app scripts with latest catalyst.pl
  - tweek .sql to make autoincrement PKs work for sqlite3
  - change Plugin::Static::Simple to Plugin::Static::Simple::ByClass
